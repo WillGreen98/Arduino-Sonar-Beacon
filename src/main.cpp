@@ -41,11 +41,11 @@ void loop() {
 
     Serial.print("Left Ping Distance: ");
     Serial.print(left_Sonar_Beacon.ping_cm(MAX_DISTANCE));
-    Serial.println("cm");
+    Serial.print("cm");
 
     Serial.print("Right Ping Distance: ");
     Serial.print(right_Sonar_Beacon.ping_cm(MAX_DISTANCE));
-    Serial.println("cm");
+    Serial.print("cm");
 
     delay(500);
     if(left_Distance_CM >= 2.0) {
@@ -53,7 +53,7 @@ void loop() {
     } else {
         Serial.print("Left Ping Distance: ");
         Serial.print(left_Sonar_Beacon.ping_cm(MAX_DISTANCE));
-        Serial.println("cm");
+        Serial.print("cm");
     }
 
     delay(500);
@@ -62,7 +62,7 @@ void loop() {
     } else {
         Serial.print("Right Ping Distance: ");
         Serial.print(right_Sonar_Beacon.ping_cm(MAX_DISTANCE));
-        Serial.println("cm");
+        Serial.print("cm");
     }
 
     if(left_Distance_CM >= MAX_DISTANCE || right_Distance_CM >= MAX_DISTANCE) {
